@@ -1,0 +1,38 @@
+<div class="container">
+  <form class="ui form" (ngSubmit)="onSubmit()" #registerForm="ngForm" method="post">
+    <div class="ui grid">
+      <div class="two wide column">
+
+      </div>
+      <div class="twelve wide column">
+        <h2 class="ui dividing header">Register User</h2>
+        <div class="field">
+          <label>* Name</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="firstName" placeholder="First Name" required [(ngModel)]="newUser.firstName">
+            </div>
+            <div class="field">
+              <input type="text" name="lastName" placeholder="Last Name" [(ngModel)]="newUser.lastName">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>* Username/Password</label>
+          <div class="three fields">
+            <div class="field">
+              <input type="text" name="userName" placeholder="User Name" [(ngModel)]="newUser.userName">
+            </div>
+            <div class="field">
+              <input type="password" name="password" placeholder="Password" [(ngModel)]="newUser.password">
+            </div>
+            <div class="field">
+              <input type="password" name="password" placeholder="Password Again">
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="ui button">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
