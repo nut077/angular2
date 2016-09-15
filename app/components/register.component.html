@@ -1,9 +1,7 @@
 <div class="container">
-  <form class="ui form" (ngSubmit)="onSubmit()" #registerForm="ngForm" method="post">
+  <form *ngIf="!registered" class="ui form" (ngSubmit)="onSubmit()" #registerForm="ngForm" method="post">
     <div class="ui grid">
-      <div class="two wide column">
-
-      </div>
+      <div class="two wide column"></div>
       <div class="twelve wide column">
         <h2 class="ui dividing header">Register User</h2>
         <div class="field">
@@ -35,4 +33,7 @@
       </div>
     </div>
   </form>
+  <div *ngIf="registered">
+    <h1>Register success!</h1>
+  </div>
 </div>
